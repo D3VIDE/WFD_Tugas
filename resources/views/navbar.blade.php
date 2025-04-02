@@ -2,7 +2,12 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
       <!-- Logo -->
-      <span class="text-3xl font-bold text-orange-500">Promotion</span>
+      <span class="text-4xl font-extrabold text-yellow-600   py-2 px-6 rounded-lg shadow-lg hover:scale-110 transform transition-all duration-300 ease-in-out hover:text-orange-600">
+        Promotify
+    </span>
+    
+    
+    
       
       <!-- Menu (Kanan) -->
       <div class="hidden md:flex items-center space-x-4 ml-auto">

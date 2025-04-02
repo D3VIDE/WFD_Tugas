@@ -36,7 +36,7 @@
         </div>
 
         <div class="flex justify-end">
-            <button type="submit" class="px-6 py-2 bg-orange-500 text-black font-bold rounded-md hover:bg-orange-600">Add Promotion</button>
+            <button type="submit" class="px-6 py-2 bg-orange-500 text-white font-bold rounded-md hover:bg-orange-600">Add Promotion</button>
         </div>
         <script>
             function updateFileName() {

@@ -1,1 +1,4 @@
 Untuk melakukan edit perlu memasuki bagian Learn More untuk menampilkan Edit
+
+php artisan storage:link
+
