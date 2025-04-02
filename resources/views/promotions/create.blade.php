@@ -1,5 +1,5 @@
 @extends('base')
-
+@section('title', 'Add Promotion')
 @section('content')
 <div class="max-w-2xl mx-auto my-8 p-4 bg-transparent shadow-lg rounded-md">
     <h2 class="text-2xl font-semibold text-center mb-6 text-orange-500">Add New Promotion</h2>

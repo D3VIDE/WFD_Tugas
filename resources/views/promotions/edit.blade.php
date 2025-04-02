@@ -1,5 +1,5 @@
 @extends('base')
-
+@section('title', ''. $promotion->title)
 @section('content')
 <div class="max-w-4xl mx-auto my-8 p-6 bg-transparent shadow-lg rounded-md">
 
