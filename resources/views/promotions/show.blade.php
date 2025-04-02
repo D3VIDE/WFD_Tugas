@@ -1,7 +1,7 @@
 @extends('base')
 
 @section('content')
-<div class="max-w-4xl mx-auto my-8 p-6 bg-transparent shadow-lg rounded-md relative">
+<div class="max-w-6xl mx-auto my-8 p-6 bg-transparent shadow-lg rounded-md relative">
 
     <div class="absolute top-4 right-4">
         <a href="{{ route('promotions.index') }}" 
@@ -16,11 +16,15 @@
 
     <div class="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-12 mt-10">
 
-        <img class="w-full sm:w-2/3 md:w-1/3 h-80 object-cover rounded-lg" 
-             src="{{ $promotion->image ? asset('storage/' . $promotion->image) : 'https://dummyimage.com/720x400' }}" 
-             alt="promotion image">
+        <!-- Gambar Kiri - Mengisi Ruang Sepenuhnya -->
+        <div class="md:w-1/2 w-full">
+            <img class="w-full h-full object-cover rounded-lg shadow-md" 
+                 src="{{ $promotion->image ? asset('storage/' . $promotion->image) : 'https://dummyimage.com/720x400' }}" 
+                 alt="promotion image">
+        </div>
 
-        <div class="md:w-2/3 text-center md:text-left">
+        <!-- Teks di Kanan -->
+        <div class="md:w-1/2 w-full text-center md:text-left">
             <h2 class="text-3xl font-semibold text-orange-500 mb-3">{{ $promotion->title }}</h2>
             <p class="text-white mb-4">{{ $promotion->description }}</p>
         </div>
