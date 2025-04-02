@@ -11,8 +11,8 @@
                src="{{ asset('storage/' . $promotion->image) }}" 
                alt="promo">
           <div class="p-6">
-            <h1 class="title-font text-lg font-bold text-gray-900 mb-3">{{ $promotion->title }}</h1>
-            <p class="leading-relaxed mb-3 text-gray-700">{{ Str::limit($promotion->description, 100) }}</p>
+            <h1 class="title-font text-lg font-bold text-orange-500 mb-3">{{ $promotion->title }}</h1>
+            <p class="leading-relaxed mb-3 text-white">{{ Str::limit($promotion->description) }}</p>
             <div class="flex items-center flex-wrap">
               <a href="{{ route('promotions.show', $promotion->id) }}" 
                  class="text-indigo-500 inline-flex items-center font-semibold hover:text-indigo-700 transition duration-200">
