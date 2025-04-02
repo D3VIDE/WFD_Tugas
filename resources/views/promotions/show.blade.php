@@ -16,7 +16,7 @@
 
     <div class="flex flex-col md:flex-row items-center md:items-start space-y-4 md:space-y-0 md:space-x-12 mt-10">
 
-        <img class="w-full sm:w-2/3 md:w-1/3 h-60 object-cover rounded-lg" 
+        <img class="w-full sm:w-2/3 md:w-1/3 h-80 object-cover rounded-lg" 
              src="{{ $promotion->image ? asset('storage/' . $promotion->image) : 'https://dummyimage.com/720x400' }}" 
              alt="promotion image">
 

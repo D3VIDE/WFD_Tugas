@@ -30,7 +30,7 @@ class RessourceController extends Controller
         $request->validate([
             'title' => 'required|max:255',
             'description' => 'required',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:7168',
         ]);
         $promotion = new Promotion();
         $promotion->title = $request->title;
@@ -77,7 +77,7 @@ class RessourceController extends Controller
         $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'required|string',
-            'image' => 'nullable|image|mimes:jpg,png,gif|max:2048' // Validasi gambar
+            'image' => 'nullable|image|mimes:jpg,png,gif|max:7168' // Validasi gambar
         ]);
     
         // Perbarui data kecuali gambar
