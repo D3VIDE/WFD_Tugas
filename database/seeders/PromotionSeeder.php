@@ -14,27 +14,27 @@ class PromotionSeeder extends Seeder
             [
                 'title' => 'Cyber Quest: The Awakening',
                 'description' => 'Rasakan petualangan futuristik dengan grafis menakjubkan dan gameplay inovatif.',
-                'image' => 'https://dummyimage.com/720x400',
+                'image' => '',
             ],
             [
                 'title' => 'Legends of Eldoria',
                 'description' => 'Jelajahi dunia fantasi penuh sihir dan bertarung melawan monster legendaris.',
-                'image' => 'https://dummyimage.com/720x400',
+                'image' => '',
             ],
             [
                 'title' => 'Street Racer X',
                 'description' => 'Balapan liar di jalanan kota dengan mobil-mobil keren dan nitro boost.',
-                'image' => 'https://dummyimage.com/720x400',
+                'image' => '',
             ],
             [
                 'title' => 'Survival Instinct: Apocalypse',
                 'description' => 'Bertahan hidup di dunia post-apocalyptic dengan zombie yang haus darah.',
-                'image' => 'https://dummyimage.com/720x400',
+                'image' => '',
             ],
             [
                 'title' => 'Shadow Ninja: Rise of Ronin',
                 'description' => 'Jadilah ninja bayangan dan lawan para samurai dalam duel mematikan.',
-                'image' => 'https://dummyimage.com/720x400',
+                'image' => '',
             ],
         ];
 

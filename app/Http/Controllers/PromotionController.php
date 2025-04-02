@@ -49,17 +49,18 @@ class PromotionController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Promotion $promotion)
     {
-        //
+        return view('promotions.show',compact('promotion'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
-        //
+    $promotion = Promotion::findOrFail($id);
+    return view('promotions.edit', compact('promotion'));
     }
 
     /**

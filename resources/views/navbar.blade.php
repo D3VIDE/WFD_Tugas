@@ -9,15 +9,20 @@
         <a href="{{ url('/') }}" class="text-white hover:text-gray-300">Home</a>
         <span class="text-gray-400">|</span>
         <a href="{{ url('promotions/create') }}" class="text-white hover:text-gray-300">Add List</a>
+        
+        @if(request()->is('promotions/*'))
         <span class="text-gray-400">|</span>
-        <a href="{{ url('promotions/edit') }}" class="text-white hover:text-gray-300">Edit List</a>
+          <a href="{{ url('promotions/edit/' . $promotion->id) }}" class="text-orange-500 font-bold hover:text-orange-700 !important">Edit</a>
+        @endif
       </div>
 
       <!-- Menu untuk Mobile (Tidak Ada Separator) -->
       <div class="md:hidden">
         <a href="{{ url('/') }}" class="text-white hover:text-gray-300">Home</a>
         <a href="{{ url('promotions/create') }}" class="text-white hover:text-gray-300">Add List</a>
-        <a href="{{ url('promotions/edit') }}" class="text-white hover:text-gray-300">Edit List</a>
+        @if(request()->is('promotions/*'))
+          <a href="{{ url('promotions/edit/' . $promotion->id) }}" class="text-orange-500 hover:text-orange-700 !important">Edit</a>
+        @endif
       </div>
     </div>
   </div>

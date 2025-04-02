@@ -19,7 +19,6 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-wrap: pretty;
-        color: white;
     }
 </style>
 <body class="bg-black">
