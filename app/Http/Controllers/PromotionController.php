@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Promotion;
 use Illuminate\Http\Request;
 
 class PromotionController extends Controller
@@ -11,7 +11,8 @@ class PromotionController extends Controller
      */
     public function index()
     {
-        //
+        $promotions = Promotion::latest()->get();
+        return view('promotions.promotion', compact('promotions'));
     }
 
     /**
