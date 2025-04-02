@@ -28,6 +28,11 @@
         <a href="{{ url('promotions/create') }}" class="text-white hover:text-gray-300">Add List</a>
         @if(request()->is('promotions/show/*'))
           <a href="{{  route('promotions.edit', $promotion->id) }}" class="text-orange-500 hover:text-orange-700 !important">Edit</a>
+          <form action="{{ route('promotions.destroy', $promotion->id) }}" method="POST" class="inline-block">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="text-red-600 font-bold hover:text-red-800">Delete</button>
+          </form>
         @endif
       </div>
     </div>

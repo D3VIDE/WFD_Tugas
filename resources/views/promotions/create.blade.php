@@ -32,7 +32,7 @@
                 <span id="file-name" class="text-white font-semibold text-sm">Tidak ada file yang dipilih</span>
             </div>
             <input type="file" id="image" name="image" class="hidden" onchange="updateFileName()">
-            <p class="text-white text-sm mt-1">Unggah gambar dengan format JPG, PNG, atau GIF (maks. 2MB).</p>
+            <p class="text-white text-sm mt-1">Unggah gambar dengan format JPG, PNG, atau GIF (maks. 7MB).</p>
         </div>
 
         <div class="flex justify-end">
