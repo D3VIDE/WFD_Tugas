@@ -28,7 +28,22 @@ class PromotionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required|max:255',
+            'description' => 'required',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+        $promotion = new Promotion();
+        $promotion->title = $request->title;
+        $promotion->description = $request->description;
+
+        if ($request->hasFile('image')) {
+            $promotion->image = $request->file('image')->store('promotions', 'public');
+        } else {
+            $promotion->image = 'https://dummyimage.com/720x400';
+        }
+        $promotion->save();
+        return redirect()->route('promotions.index')->with('success', 'Promotion created successfully!');
     }
 
     /**

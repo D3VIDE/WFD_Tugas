@@ -8,7 +8,7 @@
       <div class="p-4 md:w-1/3">
         <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-lg">
           <img class="lg:h-48 md:h-36 w-full object-cover object-center" 
-               src="{{ asset('storage/' . $promotion->image) }}" 
+               src="{{ $promotion->image ? asset('storage/' . $promotion->image) : 'https://dummyimage.com/720x400' }}"
                alt="promo">
           <div class="p-6">
             <h1 class="title-font text-lg font-bold text-orange-500 mb-3">{{ $promotion->title }}</h1>
