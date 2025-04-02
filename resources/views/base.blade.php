@@ -13,13 +13,7 @@
         font-size: 16px;
         text-wrap: pretty;
     }
-    nav, nav a {
-        font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace;
-        font-size: 16px;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-wrap: pretty;
-    }
+
 </style>
 <body class="bg-black">
     @include('navbar') <!-- Navbar termasuk di sini -->

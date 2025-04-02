@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Promotion;
 use Illuminate\Http\Request;
 
-class PromotionController extends Controller
+class RessourceController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -49,9 +49,13 @@ class PromotionController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Promotion $promotion)
+    public function show($id)
     {
-        return view('promotions.show',compact('promotion'));
+            // Ambil promotion berdasarkan ID
+    $promotion = Promotion::findOrFail($id);
+
+    // Kembalikan view dengan data promotion
+    return view('promotions.show', compact('promotion'));
     }
 
     /**
