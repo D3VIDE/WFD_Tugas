@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 use App\Models\Promotion;
 use Illuminate\Http\Request;
-
 class RessourceController extends Controller
 {
     /**
@@ -61,10 +60,10 @@ class RessourceController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit($id)
+    public function edit( $id)
     {
-    $promotion = Promotion::findOrFail($id);
-    return view('promotions.edit', compact('promotion'));
+        $promotion = Promotion::findOrFail($id);
+        return view('promotions.edit', compact('promotion'));
     }
 
     /**
@@ -72,14 +71,38 @@ class RessourceController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $promotion = Promotion::findOrFail($id);
+    
+        // Validasi input
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+            'image' => 'nullable|image|mimes:jpg,png,gif|max:2048' // Validasi gambar
+        ]);
+    
+        // Perbarui data kecuali gambar
+        $promotion->update([
+            'title' => $request->title,
+            'description' => $request->description,
+        ]);
+    
+        // Jika ada file gambar yang diunggah, update tanpa menghapus yang lama
+        if ($request->hasFile('image')) {
+            $imagePath = $request->file('image')->store('promotions', 'public');
+            $promotion->update(['image' => $imagePath]);
+        }
+    
+        return redirect()->route('promotions.index')->with('success', 'Promotion updated successfully');
     }
-
+    
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
-        //
+        $promotion = Promotion::findOrFail($id);
+        $promotion->delete();
+        return redirect()->route('promotions.index')->with('success', 'Promotion deleted successfully');
     }
+    
 }

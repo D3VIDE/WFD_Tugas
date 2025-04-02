@@ -10,3 +10,4 @@ Route::get('/', function () {
 
 Route::resource('promotions', RessourceController::class);
 Route::get('promotions/show/{id}', [RessourceController::class, 'show'])->name('promotions.show');
+Route::delete('promotions/{promotion}', [RessourceController::class, 'destroy'])->name('promotions.destroy');

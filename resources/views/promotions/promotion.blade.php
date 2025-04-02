@@ -12,7 +12,7 @@
                alt="promo">
           <div class="p-6 flex flex-col flex-grow">
             <h1 class="title-font text-lg font-bold text-orange-500 mb-3">{{ $promotion->title }}</h1>
-            <p class="leading-relaxed mb-3 text-white flex-grow">{{ $promotion->description }}</p>
+            <p class="leading-relaxed mb-3 text-white flex-grow">{{ Str::limit($promotion->description, 100) }}</p>
             <div class="flex items-center flex-wrap mt-auto">
               <a href="{{ route('promotions.show', $promotion->id) }}" 
                  class="text-yellow-400 inline-flex items-center font-semibold hover:text-yellow-600 transition duration-200">
