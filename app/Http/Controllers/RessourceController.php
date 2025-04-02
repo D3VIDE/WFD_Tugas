@@ -39,7 +39,7 @@ class RessourceController extends Controller
         if ($request->hasFile('image')) {
             $promotion->image = $request->file('image')->store('promotions', 'public');
         } else {
-            $promotion->image = 'https://dummyimage.com/720x400';
+            $promotion->image = '';
         }
         $promotion->save();
         return redirect()->route('promotions.index')->with('success', 'Promotion created successfully!');
